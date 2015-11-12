@@ -543,9 +543,11 @@ namespace android {
 	3) avoid the access of mDisplayBufInfo when it is NULL.
 *v1.0x37.0:
 	compatible with android 6.0
+*v1.0x37.1:
+	1) support TC358749XBG hdmi-in.
 */
 
-#define CONFIG_CAMERAHAL_VERSION KERNEL_VERSION(1, 0x36, 0xd)
+#define CONFIG_CAMERAHAL_VERSION KERNEL_VERSION(1, 0x37, 0x1)
 
 
 /*  */

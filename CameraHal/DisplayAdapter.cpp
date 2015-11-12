@@ -257,7 +257,10 @@ int DisplayAdapter::cameraDisplayBufferCreate(int width, int height, const char 
         }
         goto fail;
     }
-    mDispBufUndqueueMin = undequeued;
+	if(undequeued < 2)//one buf may reduce frame rate.
+		mDispBufUndqueueMin = 2;
+	else
+    	mDispBufUndqueueMin = undequeued;
     ///Set the number of buffers needed for camera preview
     
     //total = numBufs+undequeued;

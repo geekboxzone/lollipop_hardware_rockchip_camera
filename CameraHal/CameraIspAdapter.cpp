@@ -270,7 +270,7 @@ status_t CameraIspAdapter::startPreview(int preview_w,int preview_h,int w, int h
     bool low_illumin = false;
     bool is_video = false;
     
-	
+	property_set("sys.hdmiin.display", "0");//just used by hdmi-in
     if ( ( !m_camDevice->hasSensor() ) &&
          ( !m_camDevice->hasImage()  ) ){
           goto startPreview_end;
@@ -2067,7 +2067,8 @@ void CameraIspAdapter::bufferCb( MediaBuffer_t* pMediaBuffer )
           mRefEventNotifier->notifyNewFaceDecFrame(tmpFrame);
         }
     	//need to display ?
-    	if(mRefDisplayAdapter->isNeedSendToDisplay()){  
+    	if(mRefDisplayAdapter->isNeedSendToDisplay()){
+			property_set("sys.hdmiin.display", "1");//just used by hdmi-in
     	    MediaBufLockBuffer( pMediaBuffer );
     		//new frames
     		FramInfo_s *tmpFrame=(FramInfo_s *)malloc(sizeof(FramInfo_s));
