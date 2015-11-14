@@ -13,6 +13,7 @@ PRODUCT_PACKAGES += \
 	libisp_isi_drv_GC2035 \
 	libisp_isi_drv_GC2155 \
 	libisp_isi_drv_NT99252 \
+	libisp_isi_drv_TC358749XBG \
 	libisp_isi_drv_OV2685
 endif
 
@@ -32,5 +33,6 @@ PRODUCT_PACKAGES += \
 	libisp_isi_drv_GC2035 \
 	libisp_isi_drv_GC2155 \
 	libisp_isi_drv_NT99252 \
+	libisp_isi_drv_TC358749XBG \
 	libisp_isi_drv_OV2685
 endif
